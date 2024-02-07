@@ -8,10 +8,10 @@ typedef struct cirll{
 
 int n;
 
-cirll* create(*cirll);
+cirll* create(cirll* head);
 
-cirll* insert1st(*cirll);
-cirll* insertLast(*cirll);
+cirll* insert1st(cirll* head);
+cirll* insertLast(cirll* head);
 
 cirll* delete1st(cirll *head);
 cirll* deleteLast(cirll *tail);
@@ -60,7 +60,7 @@ int main()
 	return 0;
 }
 
-cirll create(cirll head)
+cirll create(cirll* head)
 {
 	cirll *ptr,*tail;
 	int ele;
