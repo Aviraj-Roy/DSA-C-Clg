@@ -60,12 +60,12 @@ int main()
 	return 0;
 }
 
-cirll create(cirll* head)
+cirll* create(cirll* head)
 {
 	cirll *ptr,*tail;
 	int ele;
 	
-	if(head!=NULL)
+	if(head != NULL)
 	{
 		printf("List exists");
 		return head;
@@ -89,15 +89,17 @@ cirll create(cirll* head)
 		if(head == NULL)
 		{
 			head = ptr;
+			tail = ptr;
 		}
 		else
 		{
-			tail->next = ptr;			
+			tail->next = ptr;
+			tail = ptr;			
 		}
 		
-		tail = ptr;
+		
 	}
-	ptr->next = head;
+	tail->next = head;
 	return head;
 }
 
